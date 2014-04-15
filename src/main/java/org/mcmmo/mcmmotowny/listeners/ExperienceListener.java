@@ -12,7 +12,7 @@ import org.mcmmo.mcmmotowny.config.Config;
 
 public class ExperienceListener implements Listener {
 
-    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
     public void onPlayerXpGainEvent(McMMOPlayerXpGainEvent event) {
         Player player = event.getPlayer();
         float experienceGained = event.getRawXpGained();
