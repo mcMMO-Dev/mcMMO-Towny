@@ -1,0 +1,11 @@
+name: mcMMO-Towny
+version: ${project.version}
+description: >
+  mcMMO-Towny is an extra plugin for mcMMO. It uses Towny to give certain players
+  modified XP gains, depending on whether or not they are inside specific towns.
+
+author: TfT_02
+website: http://dev.bukkit.org/server-mods/mcmmo-towny/
+
+main: org.mcmmo.mcmmotowny.mcMMOTowny
+softdepend: [mcMMO, Towny]

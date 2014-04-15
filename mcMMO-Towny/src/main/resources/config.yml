@@ -1,0 +1,26 @@
+#
+#  mcMMO-Towny configuration
+#  Last updated on ${project.version}
+#
+#####
+
+#
+#  Settings for mcMMO-Towny in general
+###
+General:
+    # Should mcMMO-Towny print out debug messages?
+    Verbose_Logging: false
+    # Should mcMMO-Towny over-write configs to update, or make new ones ending in .new?
+    Config_Update_Overwrite: true
+
+#
+#  Settings for experience in Towny towns
+###
+Experience:
+    # Global_Modifier: Modifies XP gained in any town
+    Global_Modifier: 1.0
+
+    # Towns.<Town_Name>: Modifies XP gained in the defined town, global modifier still applies
+    Towns:
+        Town_Name1: 1.0
+        Town_Name2: 1.0
