@@ -35,8 +35,5 @@
 # Project Stuff
 /src/main/resources/mcMMO-Towny
 
-# Other Libraries
-*.jar
-
 # Atlassian Stuff
 /atlassian-ide-plugin.xml
