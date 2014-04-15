@@ -10,3 +10,4 @@ Key:
 Version 1.0.0
  + First release
  + Added XP modifiers for specific towns and for any town
+ + Added config option to configure which skills are affected

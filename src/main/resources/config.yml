@@ -20,6 +20,21 @@ Experience:
     # Global_Modifier: Modifies XP gained in any town
     Global_Modifier: 1.0
 
+    Affected_Skills:
+        - Swords
+        - Taming
+        - Acrobatics
+        - Excavation
+        - Herbalism
+        - Unarmed
+        - Woodcutting
+        - Mining
+        - Archery
+        - Axes
+        - Repair
+        - Fishing
+        - Alchemy
+
     # Towns.<Town_Name>: Modifies XP gained in the defined town, global modifier still applies
     Towns:
         Town_Name1: 1.0

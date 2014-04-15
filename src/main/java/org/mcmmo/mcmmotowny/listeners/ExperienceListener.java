@@ -18,7 +18,7 @@ public class ExperienceListener implements Listener {
         float experienceGained = event.getRawXpGained();
         String townName = TownyUniverse.getTownName(player.getLocation());
 
-        if (townName == null) {
+        if (townName == null || !isAffectedSkill(event.getSkill().toString())) {
             return;
         }
 
@@ -26,5 +26,9 @@ public class ExperienceListener implements Listener {
         experienceGained *= Config.getInstance().getExperienceModifierTown(townName);
 
         event.setRawXpGained(experienceGained);
+    }
+
+    private boolean isAffectedSkill(String skillName) {
+        return Config.getInstance().getAffectedSkills().contains(skillName);
     }
 }
