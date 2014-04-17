@@ -20,6 +20,7 @@ Experience:
     # Global_Modifier: Modifies XP gained in any town
     Global_Modifier: 1.0
 
+    # Skills in this list will be affected by the XP modifiers
     Affected_Skills:
         - Swords
         - Taming
@@ -34,6 +35,16 @@ Experience:
         - Repair
         - Fishing
         - Alchemy
+
+    # XP gain reasons in this list will be affected by the XP modifiers
+    Affected_XP_Gains:
+        - PVP
+        - SHARED_PVP
+        - PVE
+        - SHARED_PVE
+        - VAMPIRISM
+        - COMMAND
+        - UNSPECIFIED
 
     # Towns.<Town_Name>: Modifies XP gained in the defined town, global modifier still applies
     Towns:

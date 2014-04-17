@@ -44,4 +44,13 @@ public class Config extends ConfigLoader {
 
         return list;
     }
+
+    public List<String> getAffectedXpGainReasons() {
+        List<String> list = new ArrayList<String>();
+        for (String xpGainReason : config.getStringList("Experience.Affected_XP_Gains")) {
+            list.add(xpGainReason.toUpperCase());
+        }
+
+        return list;
+    }
 }

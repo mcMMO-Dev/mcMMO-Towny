@@ -16,9 +16,11 @@ public class ExperienceListener implements Listener {
     public void onPlayerXpGainEvent(McMMOPlayerXpGainEvent event) {
         Player player = event.getPlayer();
         float experienceGained = event.getRawXpGained();
+        String skillName = event.getSkill().toString();
+        String xpGainReason = event.getXpGainReason().toString();
         String townName = TownyUniverse.getTownName(player.getLocation());
 
-        if (townName == null || !isAffectedSkill(event.getSkill().toString())) {
+        if (townName == null || !isAffectedSkill(skillName) || !isAffectedReason(xpGainReason)) {
             return;
         }
 
@@ -30,5 +32,9 @@ public class ExperienceListener implements Listener {
 
     private boolean isAffectedSkill(String skillName) {
         return Config.getInstance().getAffectedSkills().contains(skillName);
+    }
+
+    private boolean isAffectedReason(String xpGainReason) {
+        return Config.getInstance().getAffectedXpGainReasons().contains(xpGainReason);
     }
 }
