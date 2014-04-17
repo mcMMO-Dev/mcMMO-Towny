@@ -1,5 +1,6 @@
 package org.mcmmo.mcmmotowny.config;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Config extends ConfigLoader {
@@ -33,6 +34,14 @@ public class Config extends ConfigLoader {
 
     /* TOWNY */
     public double getExperienceModifierGlobal() { return config.getDouble("Experience.Global_Modifier", 1.0); }
-    public List<String> getAffectedSkills() { return config.getStringList("Experience.Affected_Skills"); }
     public double getExperienceModifierTown(String townName) { return config.getDouble("Experience.Towns." + townName, 1.0); }
+
+    public List<String> getAffectedSkills() {
+        List<String> list = new ArrayList<String>();
+        for (String skillName : config.getStringList("Experience.Affected_Skills")) {
+            list.add(skillName.toUpperCase());
+        }
+
+        return list;
+    }
 }
