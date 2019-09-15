@@ -8,6 +8,9 @@ Key:
   - Removal
 
 Version 1.0.1
+ = Fix error spam seen when used with new mcMMO builds (possible 2.* related.)
+ = Fix use of deprecated Towny API call, switched new TownyAPI.
+ ! Plugin is now MC 1.14+, as the TownyAPI call is only in versions of Towny made for 1.14+
 
 Version 1.0.0
  + First release

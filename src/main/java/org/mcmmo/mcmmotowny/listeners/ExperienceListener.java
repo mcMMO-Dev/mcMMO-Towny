@@ -6,8 +6,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 import com.gmail.nossr50.events.experience.McMMOPlayerXpGainEvent;
-
-import com.palmergames.bukkit.towny.object.TownyUniverse;
+import com.palmergames.bukkit.towny.TownyAPI;
 import org.mcmmo.mcmmotowny.config.Config;
 
 public class ExperienceListener implements Listener {
@@ -18,7 +17,7 @@ public class ExperienceListener implements Listener {
         float experienceGained = event.getRawXpGained();
         String skillName = event.getSkill().toString();
         String xpGainReason = event.getXpGainReason().toString();
-        String townName = TownyUniverse.getTownName(player.getLocation());
+        String townName = TownyAPI.getInstance().getTownName(player.getLocation());
 
         if (townName == null || !isAffectedSkill(skillName) || !isAffectedReason(xpGainReason)) {
             return;
